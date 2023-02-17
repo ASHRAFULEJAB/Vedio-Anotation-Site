@@ -234,7 +234,7 @@ const Header = () => {
           )}
         </div>
       </div>
-      <hr class="h-px bg-gray-500 border-none my-7 dark:bg-gray-200" />
+      <hr class="h-px bg-gray-500 border-none mt-3 dark:bg-gray-200" />
     </div>
   );
 };

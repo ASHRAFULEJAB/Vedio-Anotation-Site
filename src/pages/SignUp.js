@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import img from "../asstes/images/image1.jpg";
-
+import img1 from "../asstes/images/vedioanotation1.png";
 const SignUp = () => {
   return (
     <div>
@@ -13,25 +13,24 @@ const SignUp = () => {
             }}
             class="w-full max-w-md"
           >
-            <div class="flex justify-center mx-auto">
-              <img
-                class="w-auto h-7 sm:h-8"
-                src="https://merakiui.com/images/logo.svg"
-                alt=""
-              />
+            <div class="flex justify-center mx-auto mt-3">
+              <img class="w-auto h-7 sm:h-8" src={img1} alt="" />
             </div>
 
             <div class="flex items-center justify-center mt-6">
               <Link
                 to="/signin"
-                class="w-1/3 pb-4  text-2xl font-bold text-center text-gray-700 capitalize border-b border-blue-500 dark:border-sky-700  dark:text-white"
+                class=" w-1/3 pb-4 text-2xl font-bold
+               text-gray-800 capitalize border-b-2  dark:text-white"
               >
                 sign in
               </Link>
 
               <Link
                 to="/signup"
-                class="w-1/3 pb-4 text-2xl font-bold text-gray-800 capitalize border-b-2  dark:text-white"
+                class="w-1/3 pb-4  text-2xl font-bold text-center
+                 text-gray-700 capitalize border-b border-blue-500
+                  dark:border-sky-700  dark:text-white"
               >
                 sign up
               </Link>
@@ -68,7 +67,7 @@ const SignUp = () => {
 
             <label
               for="dropzone-file"
-              class="flex items-center px-3 py-3 mx-auto mt-6 text-center mx-6 
+              class="flex items-center  px-3 py-3  mt-6 text-center mx-6 
             bg-white border-2 border-dashed rounded-lg cursor-pointer 
             dark:border-gray-600 dark:bg-gray-900"
             >
@@ -177,7 +176,7 @@ const SignUp = () => {
               />
             </div>
 
-            <div class="mt-6">
+            <div class="mt-6 mx-6">
               <button
                 class="w-full px-6 py-3 text-sm font-medium tracking-wide
              text-white capitalize transition-colors duration-300 transform 
@@ -187,7 +186,7 @@ const SignUp = () => {
                 Sign Up
               </button>
 
-              <p class="mt-8 text-xs font-light text-center text-gray-200">
+              <p class="mt-3 text-xs font-light text-center text-gray-200 mb-3">
                 {" "}
                 Already have an account?{" "}
                 <Link
