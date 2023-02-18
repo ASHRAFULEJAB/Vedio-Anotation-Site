@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
-    <div>
+    <div >
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
           <h2 className="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group">
@@ -70,7 +70,8 @@ const Services = () => {
                 src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                 alt=""
               />
-              <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
+              <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 
+              bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                 <p className="mb-4 text-lg font-bold text-gray-100">
                   DATA COLLECTION
                 </p>

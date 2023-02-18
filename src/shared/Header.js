@@ -1,11 +1,33 @@
-import React, { useState } from "react";
-import Darkmode from "../components/darkMode";
-import ToogleMode from "../components/ToogleMode";
+import React, { useEffect, useState } from "react";
 import logo from "../asstes/images/vedioanotation1.png";
 import { Link } from "react-router-dom";
+import { FaLightbulb } from "react-icons/fa";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const [theme, setTheme] = useState(null);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   return (
     <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="relative flex items-center justify-between">
@@ -17,21 +39,6 @@ const Header = () => {
           >
             <img className=" h-8 w-8 text-teal-400" src={logo} alt="" />
 
-            {/* <svg
-              className="w-8 text-purple-400"
-              viewBox="0 0 24 24"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeMiterlimit="10"
-              stroke="currentColor"
-              fill="none"
-            >
-              <rect x="3" y="1" width="7" height="12" />
-              <rect x="3" y="17" width="7" height="6" />
-              <rect x="14" y="1" width="7" height="6" />
-              <rect x="14" y="11" width="7" height="12" />
-            </svg> */}
             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
               Marker Key.Io
             </span>
@@ -97,6 +104,12 @@ const Header = () => {
               Free Demo
             </Link>
           </li>
+          <button
+            className="bg-gray-100 p-4 rounded-3xl ml-2"
+            onClick={handleThemeSwitch}
+          >
+            <FaLightbulb className="text-gray-800 h-6 w-6" />
+          </button>
         </ul>
         <div className="lg:hidden">
           <button
@@ -134,21 +147,7 @@ const Header = () => {
                         src={logo}
                         alt=""
                       />
-                      {/* <svg
-                        className="w-8 text-purple-400"
-                        viewBox="0 0 24 24"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeMiterlimit="10"
-                        stroke="currentColor"
-                        fill="none"
-                      >
-                        <rect x="3" y="1" width="7" height="12" />
-                        <rect x="3" y="17" width="7" height="6" />
-                        <rect x="14" y="1" width="7" height="6" />
-                        <rect x="14" y="11" width="7" height="12" />
-                      </svg> */}
+
                       <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                         Marker Key.Io
                       </span>

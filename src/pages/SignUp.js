@@ -8,7 +8,7 @@ import signup from "../asstes/signup.json";
 const SignUp = () => {
   return (
     <div>
-      <section class="bg-gray-900 dark:bg-white lg:flex">
+      <section class="bg-gray-900  dark:bg-white lg:flex">
         <div class="container flex items-center justify-center min-h-screen px-6 mx-auto">
           <form
             style={{
@@ -59,7 +59,7 @@ const SignUp = () => {
 
               <input
                 type="text"
-                class="block w-full py-3
+                class="block w-full py-3 
                  text-gray-700 bg-white border rounded-lg px-11
                   dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600
                    focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 

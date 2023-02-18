@@ -9,7 +9,7 @@ const HomeBanner = () => {
       <div class="container px-6 py-10 mx-auto">
         <iframe
           class="min-w-full mt-3 h-64 md:h-[450px] rounded-xl overflow-hidden"
-          width="560"
+          width="100vw"
           height="315"
           src="https://www.youtube.com/embed/vbydG78Al8s"
           title="YouTube video player"
