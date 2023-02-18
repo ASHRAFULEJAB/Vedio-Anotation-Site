@@ -2,10 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import img from "../asstes/images/image1.jpg";
 import img1 from "../asstes/images/vedioanotation1.png";
-
+import Lottie from "lottie-react";
+import signin from "../asstes/signin.json";
 const SignIn = () => {
   return (
-    <section class="bg-gray-900 dark:bg-white rounded-lg">
+    <section class="bg-gray-900 dark:bg-white rounded-lg lg:flex">
       <div class="container flex items-center justify-center min-h-screen p-16 mx-auto ">
         <form
           style={{
@@ -143,6 +144,9 @@ const SignIn = () => {
             </p>
           </div>
         </form>
+      </div>
+      <div className="flex items-center mt- justify-center h-30 w-full ">
+        <Lottie animationData={signin} loop={true}></Lottie>
       </div>
     </section>
   );
